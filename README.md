@@ -1,4 +1,7 @@
-
+# Iniciar docker-compose
+```bash
+docker-compose up -d
+```
 # WireGuard
 ```dockerfile
 version: '3.3'
