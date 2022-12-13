@@ -49,3 +49,16 @@ services:
       - /usr/share/zoneinfo/Europe/Madrid:/etc/localtime
       - ubicacion/de/montaje:/media
 ```
+# Nessus
+```dockerfile
+version: '3.3'
+
+services:
+
+  nessus:
+    image: tenableofficial/nessus
+    restart: always
+    container_name: nessus
+    ports:
+      - 8834:8834
+```
