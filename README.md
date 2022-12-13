@@ -27,3 +27,22 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
 ```
+# Samba
+```dockerfile
+version: "2"
+
+services:
+
+  samba:
+    image: dperson/samba:rpi
+    restart: always
+    command: '-u "user;pass" -s "media;/media;yes;no"'
+    stdin_open: true
+    tty: true
+    ports:
+      - 139:130
+      - 445:445
+    volumes:
+      - /usr/share/zoneinfo/Europe/Madrid:/etc/localtime
+      - ubicacion/de/montaje:/media
+```
