@@ -32,7 +32,7 @@ services:
 ```
 # Samba
 ```dockerfile
-version: "2"
+version: "3.3"
 
 services:
 
